@@ -1,6 +1,6 @@
 # Predicting Credit Risk
 
-In this assignment, I built a machine learning model that attempts to predict whether a loan will be approved or not. 
+For this assignment, I built a machine learning model that attempts to predict whether a loan will be approved or not. 
 
 ## Background
 
