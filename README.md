@@ -1,34 +1,33 @@
-# Supervised Machine Learning Homework - Predicting Credit Risk
+# Predicting Credit Risk
 
-In this assignment, you will be building a machine learning model that attempts to predict whether a loan will be approved or not. 
+In this assignment, I builtg a machine learning model that attempts to predict whether a loan will be approved or not. 
 
 ## Background
 
-Lending services companies allow individual investors to partially fund personal loans as well as buy and sell notes backing the loans on a secondary market. This data will be used to 
-
-You will be using this data to create machine learning models to classify the risk level of given loans. Specifically, you will be comparing the Logistic Regression model and Random Forest Classifier.
-
-## Instructions
-
-### Retrieve the data
-
-The data is located in the Resources folder.
-
-* `lending_data.csv`
-
-Import the data using Pandas.
+Lending services companies allow individual investors to partially fund personal loans as well as buy and sell notes backing the loans on a secondary market. This data was used to create machine learning models to classify the risk level of given loans. Specifically, I compared the Logistic Regression model and Random Forest Classifier.
 
 ## Consider the models
 
-You will be creating and comparing two models on this data: a logistic regression, and a random forests classifier. Before you create, fit, and score the models, make a prediction as to which model you think will perform better. You do not need to be correct! Write down (in markdown cells in your Jupyter Notebook or in a separate document) your prediction, and provide justification for your educated guess.
+I created and compared the loan data provided: a logistic regression, and a random forests classifier. Before I created, fit, and scored the models, I predicted that the logistic regression model will perform better than the random forest classifier as logistic regression tends to do better when presented with categorical or bianry data. Since the data used determies if a loan was approved or not by indicating "1" or "0", logistic regression would be better suited.    
 
 ## Fit a LogisticRegression model and RandomForestClassifier model
 
-Create a LogisticRegression model, fit it to the data, and print the model's score. Do the same for a RandomForestClassifier. You may choose any starting hyperparameters you like. Which model performed better? How does that compare to your prediction? Write down your results and thoughts.
+For each model, I performed scaled and unscaled testing a LogisticRegression model, fit it to the data, and print the model's score using a random state of 777, 10,00 iterations (for logistic regression) and 500 estimators (for random forest classifier) as my hyperparameters.
 
-## Rubric
+## Analysis
+Both the unscaled logistic regression (LR) testing and training scores were very close as were the scaled LR scores. Additionally, both the scaled and unscaled LR results were close to each other. On the other side, the random forest classifier (RFC) scores were close to one another. Maybe it was the fact I used a high random state and it would be equally likely that these scores would drop if I reduced the state to a much lower number. Technically, RFC unscaled and scaled slightly outperformed LR unscaled and scaled, but I was expecting the LR models to do better in this instance. 
 
-[Unit 19 - Supervised Machine Learning Homework Rubric](https://docs.google.com/document/d/1eZcQul7s2gy6h9flygyPdajSPUtqOQUuGL1XXcuX6p4/edit?usp=sharing)
+Here are my initial results (truncated): 
+* Unscaled LR Training Data Score: 0.99233
+* Unscaled LR Testing Data Score:  0.99122
+* Unscaled RFC Training Score: 0.99748
+* Unscaled RFC Testing Score: 0.99164
+* Scaled LR Training Data Score: 0.99427
+* Scaled LR Testing Data Score: 0.99370
+* Scaled RFC Training Score: 0.99748
+* Scaled RFC Testing Score: 0.99133
+
+Running these models again with a lower random state number, and modifying the other parameters most likely would not move the results with the slightest significance. So while my initial assumption that logistic regression would yield better results, I can take solace that the two models ended in a virtual tie. 
 
 ### References
 
